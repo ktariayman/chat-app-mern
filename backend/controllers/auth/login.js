@@ -22,8 +22,14 @@ const login = async (req, res) => {
       
             // we will send token for the authorization & authentication
 
-      const token = 'jwt-token'
-  
+            const token = jwt.sign({
+                userId : user.id,
+                email
+              },
+              process.env.JWT_SECRET,{
+                expiresIn: '24h'
+              }
+              )  
       res.status(201).json({
           email: user.email,
           token: token,
