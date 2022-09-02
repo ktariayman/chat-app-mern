@@ -3,14 +3,14 @@ import AuthContainer from '../../../components/authContainer/authComponents/auth
 import FormLogin from './FormLogin'
 import HeaderLogin from './HeaderLogin'
 import FooterLogin from './FooterLogin'
-import { ValidateForm } from '../../../helper/ValidateForm'
+import {ValidateLoginForm } from '../../../helper/ValidateForm'
 const Login = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState(''); 
   const [password, setPassword] = useState('');
   const [isFormValid, setIsFormValid] = useState(false);
   useEffect(() => { 
     if (email && password) {
-      setIsFormValid(ValidateForm({email,password}));
+      setIsFormValid(ValidateLoginForm({email,password}));
     }
     },[email,password,setIsFormValid])
   const handleLogin = () => {
