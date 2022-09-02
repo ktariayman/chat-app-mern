@@ -1,0 +1,32 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:100px;
+    margin: 0 auto;
+}
+.label{
+    font-weight: 600;
+    font-size: 16px;
+    color: #b9bbbe;
+    text-transform: uppercase;
+}
+.input{
+    flex-grow: 1;
+    height: 40px;
+    border: 1px solid #dcddde !important;
+    border-radius:8px ;
+    color:#dcddde;
+    background-color: #35393f !important;
+    margin: 0;
+    font-size: 16px;
+    padding: 0 5px;
+    display: block;
+    width: 100%;
+}
+.input:active , input:hover , input:focus{
+    color:#dcddde;
+    border: 1px solid #dcddde;
+    background-color: #35393f;
+}
