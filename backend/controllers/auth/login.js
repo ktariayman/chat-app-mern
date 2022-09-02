@@ -31,9 +31,11 @@ const login = async (req, res) => {
               }
               )  
       res.status(201).json({
+        user :{
           email: user.email,
           token: token,
           username: user.username,
+        }
       });
     } catch (err) {
       return res.status(500).send("Error occured. Please try again");
