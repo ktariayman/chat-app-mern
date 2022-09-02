@@ -1,12 +1,14 @@
+import { AuthActions } from "../actions/authAction"
 const initState = {
     user : null
 }
 
 const reducer  = (state = initState , action) =>{
     switch(action.type){
-        case 'KTARI':
+        case AuthActions.SET_USER:
             return {
                 ...state,
+                user : action.user,
             }
             default:
                 return state
