@@ -4,18 +4,29 @@ import FormLogin from './FormLogin'
 import HeaderLogin from './HeaderLogin'
 import FooterLogin from './FooterLogin'
 import {ValidateLoginForm } from '../../../helper/ValidateForm'
-const Login = () => {
-  const [email, setEmail] = useState(''); 
-  const [password, setPassword] = useState('');
+import { useNavigate } from 'react-router-dom'
+import {connect} from "react-redux"
+import { getActions } from '../../../store/actions/authAction'
+
+
+const Login = ({login}) => {
+  const history = useNavigate();
+  const [email, setEmail] = useState(""); 
+  const [password, setPassword] = useState("");
   const [isFormValid, setIsFormValid] = useState(false);
   useEffect(() => { 
     if (email && password) {
       setIsFormValid(ValidateLoginForm({email,password}));
     }
     },[email,password,setIsFormValid])
-  const handleLogin = () => {
-    console.log('isFormValid', isFormValid);
-    }
+    const handleLogin = () => {
+      const user = {
+        email,
+        password
+      };
+  
+      login(user, history);
+    };
   return (
     <AuthContainer>
         <HeaderLogin />
@@ -30,4 +41,10 @@ const Login = () => {
   )
 }
 
-export default Login
+const mapActionToProps = (dispatch) => {
+  return {
+    ...getActions(dispatch),
+  }
+}
+
+export default connect(null, mapActionToProps)(Login)

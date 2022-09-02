@@ -3,7 +3,7 @@ import './authContainer.css'
 const authContainer = (props) => {
   return (
     <div className='authContainer'>
-        <div class="BoxContainer">
+        <div className="BoxContainer">
             {props.children}    
         </div>
     </div>

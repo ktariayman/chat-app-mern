@@ -3,18 +3,23 @@ import AuthContainer from '../../../components/authContainer/authComponents/auth
 import FooterRegister from './FooterRegister';
 import FormRegister from './FormRegister';
 import {ValidateRegisterForm } from '../../../helper/ValidateForm'
-
-const Register = () => {
+import { useNavigate } from 'react-router-dom'
+import {connect} from "react-redux"
+import { getActions } from '../../../store/actions/authAction'
+const Register = ({register}) => {
   const [email, setEmail] = useState(''); 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isFormValid, setIsFormValid] = useState(false);
-
+  const history = useNavigate()
   const handleRegister = () => {
-    console.log({
-      email , username , password
-    } , 'register');
-    }
+      const user = {
+      email , 
+      username , 
+      password
+      }
+      register(user,history)
+  }
       useEffect(() => { 
     if (email && password && username) {
       setIsFormValid(ValidateRegisterForm({email,username , password}));
@@ -38,4 +43,11 @@ const Register = () => {
   )
 }
 
-export default Register
+
+const mapActionToProps = (dispatch) => {
+  return {
+    ...getActions(dispatch),
+  }
+}
+
+export default connect(null, mapActionToProps)(Register)

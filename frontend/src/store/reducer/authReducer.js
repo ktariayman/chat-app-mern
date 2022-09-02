@@ -1,18 +1,19 @@
-import { AuthActions } from "../actions/authAction"
+import { authActions } from "../actions/authAction";
+
 const initState = {
-    user : null
-}
+  user: null,
+};
 
-const reducer  = (state = initState , action) =>{
-    switch(action.type){
-        case AuthActions.SET_USER:
-            return {
-                ...state,
-                user : action.user,
-            }
-            default:
-                return state
-                }
-}
+const reducer = (state = initState, action) => {
+  switch (action.type) {
+    case authActions.SET_USER_:
+      return {
+        ...state,
+        user: action.user,
+      };
+    default:
+      return state;
+  }
+};
 
-export default reducer
+export default reducer;
