@@ -4,6 +4,8 @@ const config = process.env;
 
 const verifyToken = (req,res,next) => {
     let token = req.body.token || req.query.token || req.headers['authorization'];
+    if(token) {token = token.replace(/^Bearer\s+/, "")};
+    
     if (!token) {
         return res.status(401).send("a token required for this request");
     }

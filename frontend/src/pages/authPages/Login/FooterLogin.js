@@ -33,7 +33,7 @@ const FooterLogin = (props) => {
             label="Login" 
             onClick={handleLogin} 
             disabled={!isFormValid} 
-            additionalStyles={{marginTop:'10px'}}
+            additionalStyles={{marginTop:'10px' , backgroundColor : isFormValid ? '#5865F2' : '#36393f'}}
             />
           <Redirect 
             text='need an account ?'
