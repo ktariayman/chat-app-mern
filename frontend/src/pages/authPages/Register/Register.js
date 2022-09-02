@@ -1,8 +1,11 @@
 import React from 'react'
+import AuthContainer from '../../../components/authContainer/authComponents/authContainer'
 
 const Register = () => {
   return (
-    <div>Register</div>
+    <AuthContainer>
+        Login
+    </AuthContainer>
   )
 }
 

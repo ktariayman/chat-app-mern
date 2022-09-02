@@ -1,8 +1,10 @@
 import React from 'react'
-
+import AuthContainer from '../../../components/authContainer/authComponents/authContainer'
 const Login = () => {
   return (
-    <div>Login</div>
+    <AuthContainer>
+        Login
+    </AuthContainer>
   )
 }
 
