@@ -1,0 +1,8 @@
+.redirect{
+    color:#72767d
+}
+.redirect-link{
+    cursor: pointer;
+    color:#00aff4;
+    font-weight: 500
+}

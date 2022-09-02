@@ -14,19 +14,22 @@
 }
 .input{
     flex-grow: 1;
-    height: 40px;
-    border: 1px solid #dcddde !important;
-    border-radius:8px ;
-    color:#dcddde;
-    background-color: #35393f !important;
-    margin: 0;
-    font-size: 16px;
-    padding: 0 5px;
-    display: block;
     width: 100%;
+    height: 40px;
+    background-color: #35393f !important;
+    color:#fff;
+    border: 1px solid #f3f3f3 !important;
+    border-radius:6px ;
+    margin: 0;
+    padding: 0 ;
+    text-align: center;
+    font-size: 16px;
 }
 .input:active , input:hover , input:focus{
-    color:#dcddde;
+    color:#fff;
     border: 1px solid #dcddde;
+    background-color: #35393f;
+}
+input:checked{
     background-color: #35393f;
 }
