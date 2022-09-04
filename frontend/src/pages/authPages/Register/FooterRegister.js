@@ -30,10 +30,10 @@ const FooterRegister = (props) => {
             />
             <div>
                 <Button  
-                    label="Login" 
+                    label="Register" 
                     onClick={handleRegister} 
                     disabled={!isFormValid} 
-                    additionalStyles={{marginTop:'10px' , backgroundColor : isFormValid ? '#5865F2' : '#36393f'}}
+                    additionalStyles={{marginTop:'10px' , width : '100%' ,backgroundColor : isFormValid ? '#5865F2' : '#36393f'}}
                     />
                 <Redirect 
                     text='have an account ?'
