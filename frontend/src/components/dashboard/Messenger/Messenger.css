@@ -1,5 +1,5 @@
 .Messenger{
     flex-grow: 1;
-    background-color: #36393f;
-    margin-top: 48px;
+    background-color: rgba(54, 57, 63,0.9);
+    display: flex;
 }

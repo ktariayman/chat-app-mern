@@ -3,8 +3,8 @@
     right: 0;
     top: 0;
     height: 48px;
-    border-bottom: 1px solid blue;
-    background-color: #36393f;
+    border-bottom: 1px solid red;
+    background-color: rgba(54, 57, 63,0.9);
     width: calc(100% -326px);
     display: flex;
     align-items: center;
