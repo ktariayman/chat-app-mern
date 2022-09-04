@@ -8,3 +8,10 @@ discord clone (chat / video app ) using
         create routes for login and register + user model + controllers 
         create authentification system with JWT 
  
+    Part 2 : 
+        initial react project with redux
+        create login and register pages with their components
+        connect api created in part 1 
+        store JWT token at clientSide ( localStorage ) and add it to requests 
+      
+        
