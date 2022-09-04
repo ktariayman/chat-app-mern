@@ -1,0 +1,10 @@
+.online-indicator{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: end;
+    background-color: green;
+    margin-left: 40%;
+
+}
