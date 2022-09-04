@@ -2,7 +2,7 @@ import React from 'react'
 import './button.css'
 const button = (props) => {
 
-    const { label , additionalStyles , disabled , onClick } = props
+    const { label , additionalStyles , disabled , onClick ,imgUrl ,imgStyle , labelStyle} = props
   return (
     <button
         className='button'
@@ -10,7 +10,13 @@ const button = (props) => {
         disabled={disabled}
         onClick={onClick}
     >
-        {label}
+        
+        {label &&
+        <div style={labelStyle ? labelStyle : {}}>{label}</div> 
+        }
+        {imgUrl && 
+          <img src={imgUrl} alt='imgUrl' style={imgStyle ? imgStyle : {}}/>
+        }
     </button>
   )
 }
