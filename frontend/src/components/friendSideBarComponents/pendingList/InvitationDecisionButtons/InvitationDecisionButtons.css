@@ -1,0 +1,24 @@
+.InvitationDecisionButtons{
+    display: flex; 
+    justify-content: end;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+.circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    position: relative;    
+    margin-left: 10px;
+
+}
+.circle a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    outline: none;
+}
