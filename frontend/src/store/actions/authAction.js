@@ -10,6 +10,7 @@ export const getActions = (dispatch) => {
     return {
         login : (user , history) => dispatch(login(user, history)),
         register : (user , history) => dispatch(register(user, history)),
+        setUser : (user ) => dispatch(setUser(user)),
     }
 }
 
@@ -51,6 +52,6 @@ const register = (user, history) => {
                 localStorage.setItem('user', JSON.stringify(user))
                 dispatch(setUser(user))
                 history('/dashboard')
-}
+            }
     }
 }

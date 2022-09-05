@@ -1,8 +1,11 @@
 import React from 'react'
 import './AppBar.css'
+import {logout} from '../../../helper/auth'
 const AppBar = () => {
   return (
-    <div className='AppBar'>AppBar</div>
+    <div className='AppBar'>
+      <button onClick = {logout}> Logout</button>
+    </div>
   )
 }
 
