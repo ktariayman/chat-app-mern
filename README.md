@@ -17,5 +17,5 @@ discord clone (chat / video app ) using
      Part 3 : 
         create dashboard page structure
         create invitations dialog
-        prepare list of friends and invitations ( fake data until I do the functionality of invitation & listFriend )
-        logout functionality ( remove token from localStorage & check if user is logged out in the dashboard page )
+        prepare friendList and PendingList (fakeData until create the  functionalities )
+        logout functionality ( remove token from localStorage & check user state)
