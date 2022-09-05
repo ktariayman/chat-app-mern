@@ -14,4 +14,8 @@ discord clone (chat / video app ) using
         connect api created in part 1 
         store JWT token at clientSide ( localStorage ) and add it to requests 
       
-        
+     Part 3 : 
+        create dashboard page structure
+        create invitations dialog
+        prepare list of friends and invitations ( fake data until I do the functionality of invitation & listFriend )
+        logout functionality ( remove token from localStorage & check if user is logged out in the dashboard page )
