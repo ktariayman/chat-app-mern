@@ -17,7 +17,7 @@ const Dashboard = ({setUser})  => {
         logout()
       }else {
         setUser(JSON.parse(user))
-        connectWithSocketServer(user)
+        connectWithSocketServer(JSON.parse(user))
       }
     },[])
 
