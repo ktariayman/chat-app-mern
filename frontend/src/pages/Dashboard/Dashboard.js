@@ -7,6 +7,7 @@ import Messenger from '../../components/dashboard/Messenger/Messenger'
 import { logout } from '../../helper/auth'
 import {connect} from "react-redux"
 import { getActions } from '../../store/actions/authAction'
+import {connectWithSocketServer} from '../../realtimeCommunication/socketConnection'
 const Dashboard = ({setUser})  => {
 
 
@@ -16,6 +17,7 @@ const Dashboard = ({setUser})  => {
         logout()
       }else {
         setUser(JSON.parse(user))
+        connectWithSocketServer(user)
       }
     },[])
 
