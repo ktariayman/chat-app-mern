@@ -5,7 +5,6 @@ const mongoose = require("mongoose");
 const connectDB = require("./config/db");
 const colors = require("colors");
 require("dotenv").config();
-const sockerServer = require("./socketServer")
 const auth = require("./routes/auth");
 
 const PORT = process.env.PORT || process.env.API_PORT;
@@ -20,7 +19,6 @@ app.use('/api/auth' ,auth)
 
 // server
 const server = http.createServer(app);
-sockerServer.registerSocketServer(server);
 server.listen(PORT, () => {
     console.log(`Server is listening on ${PORT}`);
   });
