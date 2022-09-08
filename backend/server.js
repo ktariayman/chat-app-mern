@@ -6,7 +6,7 @@ const connectDB = require("./config/db");
 const colors = require("colors");
 require("dotenv").config();
 const auth = require("./routes/auth");
-
+const socketServer  = require("./socketServer");
 const PORT = process.env.PORT || process.env.API_PORT;
 connectDB()
 
@@ -19,6 +19,7 @@ app.use('/api/auth' ,auth)
 
 // server
 const server = http.createServer(app);
+socketServer.registerSocketServer(server);
 server.listen(PORT, () => {
     console.log(`Server is listening on ${PORT}`);
   });

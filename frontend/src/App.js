@@ -20,7 +20,6 @@ function App() {
         <Route exact path="/register" element={<Register />} ></Route>
         <Route exact path="/dashboard" element={<Dashboard />} ></Route>
         <Route  path="/" element={<Dashboard />} ></Route>
-        
       </Routes>
     </BrowserRouter>
     
