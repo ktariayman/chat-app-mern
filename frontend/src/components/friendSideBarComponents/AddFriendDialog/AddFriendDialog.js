@@ -6,6 +6,9 @@ import "@reach/dialog/styles.css";
 import Button from '../../buttons/button'
 import {ValidEmail} from '../../../helper/ValidateForm'
 import Input from '../../input/Input'
+import {connect} from 'react-redux'
+import { getActions } from '../../../store/actions/authAction';
+import { sendFriendInvitation } from '../../../api';
 const additionalStyles = {
   width : "90%",
   height : "40px",
@@ -34,6 +37,9 @@ const AddFriendDialog = (props) =>{
   }
   const handleSendInvitation = () =>{
     //send friend request to server
+    sendFriendInvitation({
+      email: email,
+    })
     console.log('send invitation')
   }
   const sendButtonStyle = {
@@ -91,4 +97,10 @@ const AddFriendDialog = (props) =>{
   );
 }
 
-export default AddFriendDialog
+
+const mapActionsToProps = (disatch) => {
+  return {
+    ...getActions
+  }
+}
+export default connect(null,mapActionsToProps)(AddFriendDialog)
