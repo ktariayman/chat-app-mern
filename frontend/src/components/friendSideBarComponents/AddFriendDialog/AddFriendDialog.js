@@ -41,6 +41,9 @@ const AddFriendDialog = (props) =>{
       email: email,
     })
     console.log('send invitation')
+    setTimeout(() =>{
+      handleCloseDialog()
+    }, 500);
   }
   const sendButtonStyle = {
     display:"flex",
