@@ -10,4 +10,9 @@ const LoginValidator = Joi.object({
     password : Joi.string().min(8).max(12).required(),
     email : Joi.string().email().required()
 })
-module.exports = {registerValidator , LoginValidator}
+
+const postFriendInvitation = Joi.object({
+    email : Joi.string().email()
+})
+
+module.exports = {registerValidator , LoginValidator , postFriendInvitation}

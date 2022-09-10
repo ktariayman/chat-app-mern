@@ -43,7 +43,7 @@ export const login = async (data) => {
 
   export const sendFriendInvitation = async(data) =>{
     try {
-      return await apiClient.post('./friend-invitation/invite', data);
+      return await apiClient.post('/friend-invitation/invite', data);
     } catch (exception) {
       checkResponseCode(exception);
       return {

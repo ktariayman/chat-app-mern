@@ -6,6 +6,7 @@ const connectDB = require("./config/db");
 const colors = require("colors");
 require("dotenv").config();
 const auth = require("./routes/auth");
+const friendsInvitations = require("./routes/friendsInvitations");
 const socketServer  = require("./socketServer");
 const PORT = process.env.PORT || process.env.API_PORT;
 connectDB()
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/api/auth' ,auth)
+app.use('/api/friend-invitation',friendsInvitations)
 
 // server
 const server = http.createServer(app);
