@@ -22,7 +22,7 @@ const invite = async (req, res) => {
     }
 
 
-    // check if user has already been sent
+    // check if invitation has already been sent
     const InvitationHasAlreadyBeenSent = await FriendInvitation.findOne({
       senderId: userId,
       receiverId: targetUser._id

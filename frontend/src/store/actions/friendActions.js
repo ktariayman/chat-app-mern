@@ -7,7 +7,7 @@ export const friendsAction = {
     SET_ONLINE_USERS : 'FRIENDS.SET_ONLINE_USERS',
 }
 
-export default getActions(dispatch) = {
+export default getActions = (dispatch) =>{
     return {
         sendFriendInvitation : (data , closeDialogHandler) => {
             dispatch(sendFriendInvitation(data , closeDialogHandler))
@@ -15,6 +15,13 @@ export default getActions(dispatch) = {
     }
 }
 
+export const setPendingInvitations = (pendingFriendsInvitation) => {
+
+    return {
+        type : friendsAction.SET_PENDING_FRIENDS_INVITATIONS,
+        pendingFriendsInvitation ,      
+    }
+}
 const sendFriendInvitation = (data, closeDialogHandler) => {
     return async (dispatch ) => {
         const response = await api.sendFriendInvitation(data);
