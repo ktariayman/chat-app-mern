@@ -23,9 +23,14 @@ const FooterLogin = (props) => {
   return (
     <>      
         <Msj  
-            additionalStyles={{ marginTop:'10px' , 
-                                color:isFormValid ? "#fff" : "#fff" , 
-                                backgroundColor:isFormValid ? "green" : "red"  }}
+                                additionalStyles={{ 
+                                  margin:'10px 0px' , 
+                                  color:isFormValid ? "#fff" : "#fff" , 
+                                  backgroundColor:isFormValid ? "green" : "red"  , 
+                                  width:'100%' ,
+                                  textAlign: 'center' ,
+                                  fontSize: '16px' ,
+                                }}
             title = {isFormValid ? getFormValidateMsg() : getFormNotValidateMsj()}
         />
         <div>
