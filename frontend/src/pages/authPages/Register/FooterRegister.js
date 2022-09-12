@@ -23,14 +23,20 @@ const FooterRegister = (props) => {
   return (
         <>
            <Msj  
-            additionalStyles={{ marginTop:'10px' , 
-                                color:isFormValid ? "#fff" : "#fff" , 
-                                backgroundColor:isFormValid ? "green" : "red"  }}
+            additionalStyles={{ 
+                              margin:'10px 0px' , 
+                              color:isFormValid ? "#fff" : "#fff" , 
+                              backgroundColor:isFormValid ? "green" : "red"  , 
+                              width:'100%' ,
+                              textAlign: 'center' ,
+                              fontSize: '16px' ,
+                            }}
             title = {isFormValid ? getFormValidateMsg() : getFormNotValidateMsj()}
             />
             <div>
                 <Button  
                     label="Register" 
+                    labelStyle={{width:'100%' , textAlign: 'center' , fontSize:'20px' , color:'#fff', fontWeight:'bold'}}
                     onClick={handleRegister} 
                     disabled={!isFormValid} 
                     additionalStyles={{marginTop:'10px' , width : '100%' ,backgroundColor : isFormValid ? '#5865F2' : '#36393f'}}

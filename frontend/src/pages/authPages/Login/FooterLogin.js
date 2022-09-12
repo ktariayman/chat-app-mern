@@ -31,9 +31,10 @@ const FooterLogin = (props) => {
         <div>
         <Button  
             label="Login" 
+            labelStyle={{width:'100%' , textAlign: 'center' , fontSize:'20px' , color:'#fff', fontWeight:'bold'}}
             onClick={handleLogin} 
             disabled={!isFormValid} 
-            additionalStyles={{marginTop:'10px' , width:'100%' , backgroundColor : isFormValid ? '#5865F2' : '#36393f'}}
+            additionalStyles={{marginTop:'10px' , width:'100%' , backgroundColor : isFormValid ? '#5865F2' : '#36393f' }}
             />
           <Redirect 
             text='need an account ?'
