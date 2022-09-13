@@ -15,7 +15,7 @@ const updateFriendsPendingInvitation = async(userId) =>{
             const io = serverStore.getSocketServerInstance()
             receiverList.forEach((receiverSocketId) => {
                 io.to(receiverSocketId)
-                .emit('friendInvitation', {
+                .emit('freinds-invitations', {
                     pendingInvitations : pendingInvitations ? pendingInvitations  : []
                 })
             })
@@ -23,3 +23,5 @@ const updateFriendsPendingInvitation = async(userId) =>{
         console.error(error)
     }
 }
+
+module.exports =     updateFriendsPendingInvitation
