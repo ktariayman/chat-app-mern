@@ -3,6 +3,7 @@ const authSocket  = require('./middleware/authSocket');
 const { addNewUser } = require('./serverStore');
 const disconnectHandler = require('./socketHandler/disconnectHandler');
 const newConnectionHandler = require('./socketHandler/newConnectionHandler');
+const serverStore = require("./serverStore");
 const registerSocketServer = (server) => {
   const io = require("socket.io")(server, {
     cors: {
