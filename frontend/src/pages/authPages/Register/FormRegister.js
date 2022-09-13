@@ -18,6 +18,8 @@ const FormRegister = (props) => {
             label='email' 
             type='text' 
             placeholder='Email adress please '
+        iconClass='uil uil-envelope' 
+
         />
       
         <Input 
@@ -26,6 +28,8 @@ const FormRegister = (props) => {
             label='password' 
             type='password' 
             placeholder='password here please '
+            iconClass='uil uil-lock' 
+
         />
 
     </>

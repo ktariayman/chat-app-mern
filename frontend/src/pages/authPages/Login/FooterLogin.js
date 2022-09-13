@@ -21,25 +21,29 @@ const FooterLogin = (props) => {
 
     }
   return (
-    <>      
-        <Msj  
-                                additionalStyles={{ 
-                                  margin:'10px 0px' , 
-                                  color:isFormValid ? "#fff" : "#fff" , 
-                                  backgroundColor:isFormValid ? "green" : "red"  , 
-                                  width:'100%' ,
-                                  textAlign: 'center' ,
-                                  fontSize: '16px' ,
-                                }}
-            title = {isFormValid ? getFormValidateMsg() : getFormNotValidateMsj()}
-        />
+    <> 
+        {
+          isFormValid && 
+          <Msj  
+          additionalStyles={{ 
+            margin:'10px 0px' , 
+            color:isFormValid ? "#fff" : "#fff" , 
+            backgroundColor:isFormValid ? "green" : "red"  , 
+            width:'100%' ,
+            textAlign: 'center' ,
+            fontSize: '16px' ,
+          }}
+          title = {isFormValid ? getFormValidateMsg() : getFormNotValidateMsj()}
+          />
+        }     
+   
         <div>
         <Button  
             label="Login" 
             labelStyle={{width:'100%' , textAlign: 'center' , fontSize:'20px' , color:'#fff', fontWeight:'bold'}}
             onClick={handleLogin} 
             disabled={!isFormValid} 
-            additionalStyles={{marginTop:'10px' , width:'100%' , backgroundColor : isFormValid ? '#5865F2' : '#36393f' }}
+            additionalStyles={{marginTop:'10px' , width:'100%' , backgroundColor : isFormValid ? '#4070f4' : '#36393f' }}
             />
           <Redirect 
             text='need an account ?'

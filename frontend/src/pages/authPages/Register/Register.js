@@ -12,6 +12,22 @@ const Register = ({register}) => {
   const [password, setPassword] = useState('');
   const [isFormValid, setIsFormValid] = useState(false);
   const history = useNavigate()
+  const headerStyles = {
+    display:"flex",
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    fontSize: '18px',
+    fontWeight: 'bold',
+  }
+  const hrStyle ={
+      "width": "40%",
+      "position": "absolute",
+      "height": "3px",
+      "bottom": "4px",
+      "background": "#333"
+  }
+
   const handleRegister = () => {
       const user = {
       email , 
@@ -27,8 +43,14 @@ const Register = ({register}) => {
     },[email,password,username,setIsFormValid])
   return (
     <AuthContainer>
-        <h2 style={{color:'#fff'}}>Register : Create an account</h2>
-        <FormRegister 
+     
+     <div style={headerStyles}>
+          <div style={{position: 'relative'}}>
+            <h1 >Register</h1>
+            <hr style={hrStyle}/>
+          </div> 
+            </div>       
+          <FormRegister 
             email={email}
             setEmail={setEmail}
             password={password}

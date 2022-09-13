@@ -22,17 +22,21 @@ const FooterRegister = (props) => {
     }
   return (
         <>
-           <Msj  
-            additionalStyles={{ 
-                              margin:'10px 0px' , 
-                              color:isFormValid ? "#fff" : "#fff" , 
-                              backgroundColor:isFormValid ? "green" : "red"  , 
-                              width:'100%' ,
-                              textAlign: 'center' ,
-                              fontSize: '16px' ,
-                            }}
-            title = {isFormValid ? getFormValidateMsg() : getFormNotValidateMsj()}
+          {
+            isFormValid &&
+              <Msj  
+                additionalStyles={{ 
+                                  margin:'10px 0px' , 
+                                  color:isFormValid ? "#fff" : "#fff" , 
+                                  backgroundColor:isFormValid ? "green" : "red"  , 
+                                  width:'100%' ,
+                                  textAlign: 'center' ,
+                                  fontSize: '16px' ,
+                                }}
+                title = {isFormValid ? getFormValidateMsg() : getFormNotValidateMsj()}
             />
+          }
+           
             <div>
                 <Button  
                     label="Register" 
