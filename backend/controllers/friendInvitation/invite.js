@@ -1,6 +1,7 @@
 const User = require("../../models/user")
 const FriendInvitation = require("../../models/friendInvitation")
 const friendsUpdate = require("../../socketHandler/updates/friends")
+
 const invite = async (req, res) => {
   const { userId, email } = req.user;
   const targetEmail = req.body.email;
@@ -48,7 +49,7 @@ const invite = async (req, res) => {
 
     const newInvitation = await FriendInvitation.create({
       senderId: userId,
-      receivedId: targetUser._id
+      receiverId: targetUser._id
     })
     console.log("newInvitation")
     

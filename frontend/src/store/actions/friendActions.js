@@ -27,5 +27,7 @@ const sendFriendInvitation = (data) => {
         const response = await api.sendFriendInvitation(data);
         if(!response.error) {
             return "invitation sent successfully"
+        }else{
+            return response.exception?.response?.data
         }
 }}

@@ -4,9 +4,12 @@ import thunk from "redux-thunk";
 import { legacy_createStore as createStore } from 'redux';
 
 import authReducer from "./reducer/authReducer";
+import friendsReducer from "./reducer/friendsReducer";
 
 const rootReducer = combineReducers({
   auth: authReducer,
+  friends: friendsReducer,
+
 });
 
 const store = createStore(

@@ -6,7 +6,7 @@ const friendInvitation = new mongoose.Schema({
     type : Schema.Types.ObjectId,
     ref : 'User',
   },
-  receivedId : {
+  receiverId : {
     type : Schema.Types.ObjectId,
     ref: 'User',
   },

@@ -11,6 +11,9 @@ const registerSocketServer = (server) => {
       methods: ["GET", "POST"],
     },
   });
+
+  serverStore.setSocketServerInstance(io);
+
   // middleware authSocket
   io.use((socket , next) =>  {
     authSocket(socket,next)

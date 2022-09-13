@@ -5,17 +5,17 @@ import FriendListItem from './FriendListItem/FriendListItem'
 const friendListData = [
   {
     id: 1,
-    username: 'Joe',
+    username: 'Ktari ',
     isOnline: true
   },
   {
     id: 2,
-    username: 'Joe',
+    username: 'Ktari',
     isOnline: false
   },
   {
     id: 3,
-    username: 'Joe',
+    username: 'Ktari',
     isOnline: true
   }
 ]

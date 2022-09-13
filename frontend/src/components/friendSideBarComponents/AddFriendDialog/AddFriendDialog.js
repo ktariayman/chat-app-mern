@@ -40,7 +40,6 @@ const AddFriendDialog = (props) =>{
     sendFriendInvitation({
       email: email,
     })
-  
  
   }
   const sendButtonStyle = {
