@@ -1,6 +1,7 @@
 import React from 'react'
 import PendingInvitationListItem from './PendingInvitationListItem/PendingInvitationListItem'
 import './pendingList.css'
+import {connect} from 'react-redux'
 const PendingListData = [
   {
     id: 1,
@@ -24,21 +25,30 @@ const PendingListData = [
     }
   }
 ]
-const pendingList = () => {
+const pendingList = ({pendingFriendsInvitation}) => {
+
   return (
     <div className="pendingList">
 
-{
-        PendingListData.map((p) => (
+    {
+        pendingFriendsInvitation.map((p) => (
           <PendingInvitationListItem
             key={p.id}
             id={p.id}
             username={p.senderId.username}
             email={p.senderId.email}
           />
-        ))}
+        ))
+    }
     </div>
   )
 }
 
-export default pendingList
+
+const mapStoreStateToProps = ({friends}) => {
+  return {
+    ...friends,
+  }
+
+}
+export default connect(mapStoreStateToProps)(pendingList)
