@@ -33,8 +33,8 @@ const pendingList = ({pendingFriendsInvitation}) => {
     {
         pendingFriendsInvitation.map((p) => (
           <PendingInvitationListItem
-            key={p.id}
-            id={p.id}
+            key={p._id}
+            id={p._id}
             username={p.senderId.username}
             email={p.senderId.email}
           />

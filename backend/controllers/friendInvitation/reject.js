@@ -1,6 +1,6 @@
 
 
 const reject = async (req, res) => {
-    res.send('reject')
+    return res.send('reject')
 };
 module.exports= reject;

@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './pendingInvitationListItem.css'
 import Avatar from '../../../Avatar/avatar'
 import InvitationDecisionButtons from '../InvitationDecisionButtons/InvitationDecisionButtons'
+import {connect} from 'react-redux'
+import {getActions} from '../../../../store/actions/friendActions'
 const PendingInvitationListItem = (props) => {
     const {
       username , id , email, 
@@ -14,12 +16,14 @@ const PendingInvitationListItem = (props) => {
     } = props
     const [buttonDisabled , setButtonDisabled] = useState(false);
     const handleAcceptFriendInvitation = () => {
+      console.log(id)
       acceptFriendInvitation({id})
       setButtonDisabled(true) 
       console.log('acceptFriendInvitation' , id , buttonDisabled)
 
     }
     const handleRejectFriendInvitation = () => {
+      console.log(id)
       rejectFriendInvitation({id})
       setButtonDisabled(true) 
       console.log('rejectFriendInvitation' , id , buttonDisabled)
@@ -53,4 +57,13 @@ const PendingInvitationListItem = (props) => {
   )
 }
 
-export default PendingInvitationListItem
+const mapActionToProps = (dispatch) =>
+  {
+    return {
+      ...getActions(dispatch)
+    }
+
+  }
+
+
+export default connect(null,mapActionToProps)(PendingInvitationListItem)

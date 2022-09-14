@@ -9,9 +9,10 @@ export const friendsAction = {
 
 export const  getActions = (dispatch) =>{
     return {
-        sendFriendInvitation : (data ) => {
-            dispatch(sendFriendInvitation(data ))
-        }
+        sendFriendInvitation : (data ) => dispatch(sendFriendInvitation(data )),
+        acceptFriendInvitation: (data ) =>   dispatch(acceptFriendInvitation(data)),
+        rejectFriendInvitation: (data ) =>   dispatch(rejectFriendInvitation(data)) 
+        
     }
 }
 
@@ -27,6 +28,25 @@ const sendFriendInvitation = (data) => {
         const response = await api.sendFriendInvitation(data);
         if(!response.error) {
             return "invitation sent successfully"
+        }else{
+            return response.exception?.response?.data
+        }
+}}
+const acceptFriendInvitation = (data) => { 
+
+    return async (dispatch) => {
+            const response = await api.acceptFriendInvitation(data);
+            if(!response.error) {
+                return "invitation accepted successfully"
+            }else{
+                return response.exception?.response?.data
+            }
+ }}
+const rejectFriendInvitation = (data) => { 
+    return async (dispatch) => {
+        const response = await api.rejectFriendInvitation(data);
+        if(!response.error) {
+            return "invitation rejected "
         }else{
             return response.exception?.response?.data
         }

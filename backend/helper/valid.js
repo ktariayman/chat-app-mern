@@ -14,5 +14,8 @@ const LoginValidator = Joi.object({
 const postFriendInvitation = Joi.object({
     email : Joi.string().email()
 })
+const inviteDecisionSchema = Joi.object({
+    id : Joi.string().required()
+})
 
-module.exports = {registerValidator , LoginValidator , postFriendInvitation}
+module.exports = {registerValidator , LoginValidator , postFriendInvitation, inviteDecisionSchema}
