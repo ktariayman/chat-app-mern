@@ -3,8 +3,7 @@ const friendsUpdate  = require ('../../socketHandler/updates/friends')
 
 const reject = async (req, res) => {
 
-    try {
-    
+    try { 
         const {id} = req.body
         const {userId} = req.user
         // remove the invitation from friend invitations list
@@ -18,7 +17,7 @@ const reject = async (req, res) => {
 
     } catch (error) {   
             console.log(error);
-            return res.status(500).send({ "something wrong , try again" : error });
+            return res.status(500).send( "something wrong , try again" + error );
     }
 };
 module.exports= reject;
