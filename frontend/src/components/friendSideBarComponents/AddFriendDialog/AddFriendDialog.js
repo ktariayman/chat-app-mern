@@ -51,9 +51,9 @@ const AddFriendDialog = (props) =>{
     margin:'auto',
     marginTop: "10px",
     marginBottom: "10px",
-    backgroundColor : isFormValid ? "#3ba55d" : "",
-    color : !isFormValid ? "#000" : ""
-  
+    backgroundColor : isFormValid ? "#3ba55d" : "#333",
+    color : !isFormValid ? "#fff" : "#fff",
+    border: "1px solid #fff",
   }
 
   useEffect(() => {
@@ -88,7 +88,7 @@ const AddFriendDialog = (props) =>{
           <Button  
                 disabled={!isFormValid} 
                 onClick={handleSendInvitation}
-                label={isFormValid ? "Send" : ""} 
+                label={isFormValid ? "Send" : "Form not valid .."} 
                 additionalStyles={sendButtonStyle}
           />        
         </div>
