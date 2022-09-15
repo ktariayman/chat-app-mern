@@ -23,6 +23,21 @@ export const setPendingInvitations = (pendingFriendsInvitation) => {
         pendingFriendsInvitation ,      
     }
 }
+
+export const setFriends = (friends) => {
+
+    return {
+        type : friendsAction.SET_FRIENDS,
+        friends ,      
+    }
+}
+
+export const setOnlineUsers = (onlineUsers) => {  
+        return {
+            type: friendsAction.SET_ONLINE_USERS,
+            onlineUsers
+        }
+    }
 const sendFriendInvitation = (data) => {
     return async (dispatch ) => {
         const response = await api.sendFriendInvitation(data);

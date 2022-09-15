@@ -11,6 +11,10 @@ serverStore.addNewUser({
 })
     // update pending Invitation List
     friendsUpdate.updateFriendsPendingInvitation(user.userId)
+    // update friends List
+    friendsUpdate.updateFriends(user.userId)
+
+
 }
 
 module.exports = newConnectionHandler
