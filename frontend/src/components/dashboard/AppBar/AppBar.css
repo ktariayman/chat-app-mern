@@ -8,6 +8,8 @@
     width: calc(100% -326px);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 16px;
+    width: calc(100% - 310px);
+
 }
