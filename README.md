@@ -24,3 +24,6 @@ discord clone (chat / video app ) using
         connect with socket.io
         friend invitations List system  
         online friend list 
+    Part 5 : 
+        check branche Realtime Chat communication
+    
