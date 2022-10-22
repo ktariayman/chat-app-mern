@@ -29,8 +29,6 @@ const Dashboard = ({setUser})  => {
 
   return (
       <DashboardContainer>
-        {console.log("dashboard")}
-        <Sidebar/>
         <FriendSideBar />
         <Messenger />
         <AppBar />
