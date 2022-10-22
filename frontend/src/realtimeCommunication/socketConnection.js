@@ -14,7 +14,6 @@ export const connectWithSocketServer = (user) =>{
     socket.on("connect", () => {
         console.log('Connected to socket server');
         console.log(socket.id);
-            
     });
 
     socket.on("friends-invitations" , (data)  => {
@@ -28,6 +27,19 @@ export const connectWithSocketServer = (user) =>{
     socket.on("online-users" , (data)  => {
         const {onlineUsers} =data
         store.dispatch(setOnlineUsers(onlineUsers))
-
     })
+    socket.on("direct-chat-history" , (data)  => {
+        console.log("direct-chat-history came from the server")
+        console.log(data)
+    })
+}
+
+export const sendDirectMessage = (data) => {
+    console.log(data)
+    socket.emit("direct-message", data)
+}
+
+
+export const getDirectChatHistory = (data) => {
+    socket.emit("direct-chat-history", data)
 }
