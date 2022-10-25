@@ -1,10 +1,26 @@
 import React from 'react'
 import './Messenger.css'
-
-const Messenger = () => {
+import {connect} from 'react-redux'
+import WelcomeMessage from './WelcomeMessage'
+import MessangerContent from './MessangerContent'
+const Messenger = ({ chosenChatDetails}) => {
   return (
-    <div className='Messenger'>Messenger</div>
+    <div className='Messenger'>
+
+      {!chosenChatDetails ? (
+        <WelcomeMessage/>
+      ) :(
+        <MessangerContent chosenChatDetails={chosenChatDetails}/>
+
+      )
+      }
+    </div>
   )
 }
 
-export default Messenger
+const mapStoreStateToProps = ({chat}) => {
+  return {
+    ...chat
+  }
+}
+export default connect(mapStoreStateToProps)(Messenger)

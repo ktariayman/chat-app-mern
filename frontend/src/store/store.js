@@ -5,11 +5,12 @@ import { legacy_createStore as createStore } from 'redux';
 
 import authReducer from "./reducer/authReducer";
 import friendsReducer from "./reducer/friendsReducer";
+import chatReducer from "./reducer/chatReducer";
 
 const rootReducer = combineReducers({
   auth: authReducer,
   friends: friendsReducer,
-
+  chat:chatReducer,
 });
 
 const store = createStore(

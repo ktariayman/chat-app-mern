@@ -6,7 +6,7 @@ const initState = {
 
 const reducer = (state = initState, action) => {
   switch (action.type) {
-    case authActions.SET_USER_:
+    case authActions.SET_USER:
       return {
         ...state,
         user: action.user,
