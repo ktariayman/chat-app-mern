@@ -1,39 +1,36 @@
-import React from 'react'
-import Input from '../../../components/input/Input'
+import React from 'react';
+import InputWithLabel from '../../../components/InputWithLabel';
 
 const FormRegister = (props) => {
-    const {email, setEmail ,password, setPassword , username, setUsername} = props
+  const { email, setEmail, password, setPassword, username, setUsername } = props;
   return (
     <>
-      <Input 
-            value ={username}
-            setValue ={setUsername}
-            label='username' 
-            type='text' 
-            placeholder='username here please '
-        />
-        <Input 
-            value ={email}
-            setValue ={setEmail}
-            label='email' 
-            type='text' 
-            placeholder='Email adress please '
-        iconClass='uil uil-envelope' 
+      <InputWithLabel
+        value={username}
+        setValue={setUsername}
+        label='username'
+        type='text'
+        placeholder='username here please '
+      />
+      <InputWithLabel
+        value={email}
+        setValue={setEmail}
+        label='email'
+        type='text'
+        placeholder='Email adress please '
+        iconClass='uil uil-envelope'
+      />
 
-        />
-      
-        <Input 
-            value ={password}
-            setValue ={setPassword}
-            label='password' 
-            type='password' 
-            placeholder='password here please '
-            iconClass='uil uil-lock' 
-
-        />
-
+      <InputWithLabel
+        value={password}
+        setValue={setPassword}
+        label='password'
+        type='password'
+        placeholder='password here please '
+        iconClass='uil uil-lock'
+      />
     </>
-    )
-}
+  );
+};
 
-export default FormRegister
+export default FormRegister;

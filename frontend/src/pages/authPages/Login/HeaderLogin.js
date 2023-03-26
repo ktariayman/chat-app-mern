@@ -1,30 +1,15 @@
-import React from 'react'
-const headerStyles = {
-  display:"flex",
-  justifyContent: 'center',
-  alignItems: 'center',
-  flexDirection: 'column',
-  fontSize: '18px',
-  fontWeight: 'bold',
-}
-const hrStyle ={
-    "width": "40%",
-    "position": "absolute",
-    "height": "3px",
-    "bottom": "4px",
-    "background": "#333"
-}
+import React from 'react';
+import { Typography } from '@mui/material';
+
 const HeaderLogin = () => {
   return (
-    <div style={headerStyles}>
-      <div style={{position: 'relative'}}>
-      <h1 >Login</h1>
-      <hr style={hrStyle}/>
-      </div>
-      <h3>Ha, te revoilà !</h3>
-      <div>Nous sommes si heureux de te revoir !</div>
-    </div>
-  )
-}
+    <>
+      <Typography variant='h5' sx={{ color: 'white' }}>
+        Welcome Back!
+      </Typography>
+      <Typography sx={{ color: '#b9bbbe' }}>We are happy that you are with us!</Typography>
+    </>
+  );
+};
 
-export default HeaderLogin
+export default HeaderLogin;
