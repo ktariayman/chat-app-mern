@@ -1,8 +1,0 @@
-.friendSideBar{
-    width: 250px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(47, 49, 54,0.9);
-}

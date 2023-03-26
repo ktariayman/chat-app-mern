@@ -1,29 +1,27 @@
-import React from 'react'
-import Input from '../../../components/input/Input'
+import React from 'react';
+import InputWithLabel from '../../../components/InputWithLabel';
 
 const FormLogin = (props) => {
-    const {email , setEmail , password , setPassword } = props
+  const { email, setEmail, password, setPassword } = props;
+
   return (
-    <div className='form'>
-    <Input 
-        value ={email}
-        setValue ={setEmail}
-        label='email' 
-        type='text' 
-        placeholder='Email adress please '
-        iconClass='uil uil-envelope' 
-    />
-    <Input 
-        value ={password}
-        setValue ={setPassword}
-        label='password' 
-        type='password' 
-        placeholder='password here please '
-        iconClass='uil uil-lock' 
+    <>
+      <InputWithLabel
+        value={email}
+        setValue={setEmail}
+        label='E-mail'
+        type='text'
+        placeholder='Enter e-mail address'
+      />
+      <InputWithLabel
+        value={password}
+        setValue={setPassword}
+        label='Password'
+        type='password'
+        placeholder='Enter password'
+      />
+    </>
+  );
+};
 
-    />
-    </div>
-    )
-}
-
-export default FormLogin
+export default FormLogin;
