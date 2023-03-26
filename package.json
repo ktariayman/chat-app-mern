@@ -1,0 +1,16 @@
+{
+  "name": "chat-app-mern",
+  "version": "1.0.0",
+  "description": "chat app using\r     MongoDB,  Express, React, Node , Redux with WebRTC and SocketIO for realtime communication possibility.",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-client": "cd client && npm run build",
+    "deploy": "concurrently \"npm run build-client\"  \"npm run server\" "
+  },
+  "author": "",
+  "license": "ISC"
+}
