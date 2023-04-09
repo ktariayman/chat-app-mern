@@ -40,3 +40,12 @@ MongoDB, Express, React, Node , Redux with WebRTC and SocketIO for realtime comm
   - invite,
     -accept,
     -reject
+
+# FEATURES
+
+- login & register
+- friend Invitation system :invite, accept, reject
+- Realtime Chat communication:
+  - create realtime communication system with socketIO
+  - save messages in database
+- Video Group Call Rooms
